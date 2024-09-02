@@ -1,28 +1,14 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const bands = [
-        'The Plot in You', 
-        'The Devil Wears Prada', 
-        'Pierce the Veil', 
-        'Norma Jean', 
-        'The Bled', 
-        'Say Anything', 
-        'The Midway State', 
-        'We Came as Romans', 
-        'Counterparts', 
-        'Oh, Sleeper', 
-        'A Skylit Drive', 
-        'Anywhere But Here', 
-        'An Old Dog'
-    ];
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorted Articles</title>
+</head>
+<body>
+    <h1>Sorted Articles</h1>
+    <ul id="band"></ul>
 
-    const removeArticles = str => str.replace(/\b(a|an|the)\b\s*/gi, '');
-
-    const sortedBands = bands
-        .map(removeArticles)
-        .sort()
-        .map(band => `<li>${band}</li>`)
-        .join('');
-
-    document.getElementById('bands').innerHTML = sortedBands;
-});
-
+    <script src="script.js"></script>
+</body>
+</html>
